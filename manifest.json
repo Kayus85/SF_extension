@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Sales Force Extension",
+  "version": "1.0",
+  "description": "Data transfer",
+  "permissions": ["activeTab", "declarativeContent"],
+  "content_scripts": [{
+    "matches": ["https://kays.shoplightspeed.com/*"],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "page_action": {
+    "default_icon": "SF&LS.png",
+    "default_popup": "popup.html",
+    "default_title": "A popup will come here"
+  }
+}
